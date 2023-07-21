@@ -1,6 +1,8 @@
 server:
   port: 8888
 spring:
+  application:
+    name: configserver-ms
   cloud:
     config:
       server:
@@ -8,3 +10,7 @@ spring:
           uri: https://github.com/AlejandroTorresUNMSM/bootcamp-config
           search-paths: /
           default-label: "main"
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90
