@@ -11,6 +11,11 @@ spring:
           search-paths: /
           default-label: "main"
 eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
   instance:
+    preferIpAddress: false
+    hostname: 127.0.0.1
     leaseRenewalIntervalInSeconds: 30
     leaseExpirationDurationInSeconds: 90
